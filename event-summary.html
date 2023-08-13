@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Summary</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="default-text">Default Text</h3>
+    <h4 id="some-text">He is the biggest criminal</h4>
+    <button onclick="clickHandler()" type="button">Click Me</button>
+    <button id="click-here" type="button">Click Here</button>
+
+
+    <br>
+    <p id="change-text">Change the text</p>
+    <input id="input-text" type="text">
+    <button id="btn-update">Update</button>
+    <script>
+       document.getElementById('btn-update').addEventListener('click', function(){
+        const inputText = document.getElementById('input-text');
+        const inputValue = inputText.value;
+        const p = document.getElementById('change-text');
+        p.innerText = inputText.value;
+        inputText.value = '';
+       })
+          
+        
+    </script>
+    <script src="js/event-summary.js"></script>
+</body>
+</html>
